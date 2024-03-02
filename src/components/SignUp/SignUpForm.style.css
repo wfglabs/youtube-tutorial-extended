@@ -1,0 +1,149 @@
+:root {
+    --yte-primary-button: 0, 149, 246;
+    --web-always-white: 255, 255, 255;
+    --yte-link: 0, 55, 107;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif; --font-family-input: SourceCodePro, monaco, Courier, monospace;
+  }
+
+  .yte-header-content {
+    font-size: 1.8em;
+    font-weight: 800;
+    font-family: "Roboto", sans-serif;
+    color: #333;
+  }
+
+  .centered-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+  }
+
+  .create-your-account-text {
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #333;
+  }
+  
+  .signup-form {
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .signup-form h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+  
+  .input-container {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .google-icon {
+    height: 19px;
+  }
+
+  .input-container label {
+    padding: 8px;
+    display: block;
+    font-weight: 500;
+    text-align: left;
+    font-size: 17px;
+  }
+  
+  .input-container input {
+    padding: 14px;
+    width: 90%;
+    border-radius: 8px;
+    font-size: 17px;
+    border: 1px solid #d0cdcd;
+    transition: #999898 0.3s ease;
+  }
+
+  .input-container input:focus {
+    outline: none;
+    border-color: #474646;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-submit-button {
+    padding: 10px;
+    width: 64%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border-radius: 13px;
+    font-size: 17px;
+    color: rgb(var(--web-always-white));
+    background-color: rgb(var(--yte-primary-button));
+    border: 1px solid #ccc;
+  }
+
+  .or-text {
+    margin-top: 15px;
+  }
+
+  .google-signup-button {
+    padding: 10px;
+    width: 98%;
+    border-radius: 13px;
+    font-size: 17px;
+    color: rgb(var(--web-always-white));
+    background-color: rgb(var(--yte-primary-button));
+    border: 1px solid #ccc;
+  }
+
+  .agree-terms input[type="checkbox"] {
+    margin-right: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .terms-label::before {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 50px;
+  }
+
+  .switch-to-login {
+    margin-top: 5%;
+    padding: 2%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(var(--yte-link));
+  }
+
+  .swtich-to-login-link {
+    color: rgb(var(--yte-primary-button));
+  }
+
+  .signup-form-content {
+    padding: 10px;
+  }
+
+  .validation-error {
+    text-align: left;
+    font-size: 14px;
+    padding: 1% 2%;
+    color: red;
+  }
+
+  .toggle-show-password-signup-button {
+    position: absolute;
+    margin-top: -9%;
+    margin-left: 88%;
+  }
+
+  .toggle-show-password-signup-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+  }
