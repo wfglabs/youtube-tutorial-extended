@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './SignUpForm.style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 const SignUpForm: React.FC = () => {
   const [fullName, setFullName] = useState('')
@@ -24,6 +25,8 @@ const SignUpForm: React.FC = () => {
   const validateFullName = () => {
     if (!fullName.trim()) {
       setFullNameError('Full name is required')
+    } else if (!/^[a-zA-Z\s]+$/.test(fullName)) {
+      setFullNameError('Full name should only contain letters and spaces')
     } else {
       setFullNameError('')
     }
@@ -230,7 +233,7 @@ const SignUpForm: React.FC = () => {
                   value={password}
                   onChange={handlePasswordChange}
                 />
-                <div className="toggle-show-password-button">
+                <div className="toggle-show-password-signup-button">
                   <button type="button" onClick={togglePasswordVisibility}>
                     <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
                   </button>
@@ -250,7 +253,7 @@ const SignUpForm: React.FC = () => {
                   value={confirmPassword}
                   onChange={handleConfirmPasswordChange}
                 />
-                <div className="toggle-show-password-button">
+                <div className="toggle-show-password-signup-button">
                   <button
                     type="button"
                     onClick={toggleConfirmPasswordVisibility}
@@ -285,9 +288,9 @@ const SignUpForm: React.FC = () => {
         <div className="switch-to-login">
           <p>
             Already have account?{' '}
-            <a href="#" className="swtich-to-login-link">
+            <Link to="/login" className="swtich-to-login-link">
               Log in
-            </a>
+            </Link>
           </p>
         </div>
       </div>

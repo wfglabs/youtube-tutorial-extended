@@ -1,13 +1,13 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
 import SignUpForm from './components/SignUp/SignUpForm'
+import SignInForm from './components/SignIn/SignInForm'
 
 function App() {
   return (
-    <div className="App">
-      <SignUpForm />
-    </div>
+    <Routes>
+      <Route path="/login" Component={SignInForm} />
+      <Route path="/signup" Component={SignUpForm} />
+    </Routes>
   )
 }
 
