@@ -1,169 +1,169 @@
-import React, { useState } from "react";
-import "./SignUpForm.style.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react'
+import './SignUpForm.style.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 
 const SignUpForm: React.FC = () => {
-  const [fullName, setFullName] = useState("");
-  const [fullNameError, setFullNameError] = useState("");
-  const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordError, setPasswordError] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [confirmPasswordError, setConfirmPasswordError] = useState("");
-  const [agreeTerms, setAgreeTerms] = useState(false);
-  const [isEmailInputFocused, setIsEmailInputFocused] = useState(false);
-  const [isFullNameInputFocused, setIsFullNameInputFocused] = useState(false);
-  const [isPasswordInputFocused, setIsPasswordInputFocused] = useState(false);
-  const [isConfirmPasswordInputFocused, setIsConfirmPasswordInputFocused] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [fullName, setFullName] = useState('')
+  const [fullNameError, setFullNameError] = useState('')
+  const [email, setEmail] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [password, setPassword] = useState('')
+  const [passwordError, setPasswordError] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [confirmPasswordError, setConfirmPasswordError] = useState('')
+  const [agreeTerms, setAgreeTerms] = useState(false)
+  const [isEmailInputFocused, setIsEmailInputFocused] = useState(false)
+  const [isFullNameInputFocused, setIsFullNameInputFocused] = useState(false)
+  const [isPasswordInputFocused, setIsPasswordInputFocused] = useState(false)
+  const [isConfirmPasswordInputFocused, setIsConfirmPasswordInputFocused] =
+    useState(false)
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
   const validateFullName = () => {
     if (!fullName.trim()) {
-      setFullNameError("Full name is required");
+      setFullNameError('Full name is required')
     } else {
-      setFullNameError("");
+      setFullNameError('')
     }
   }
 
   const handleFullNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newName = e.target.value;
-    setFullName(newName);
+    const newName = e.target.value
+    setFullName(newName)
 
-    validateFullName();
-  };
+    validateFullName()
+  }
 
   const validateEmail = () => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const isValidEmail = emailRegex.test(email);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const isValidEmail = emailRegex.test(email)
     if (!isValidEmail) {
-      setEmailError("Please enter a valid email address");
+      setEmailError('Please enter a valid email address')
     } else {
-      setEmailError("");
+      setEmailError('')
     }
   }
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newEmail = e.target.value;
-    setEmail(newEmail);
+    const newEmail = e.target.value
+    setEmail(newEmail)
 
-    validateEmail();
-  };
+    validateEmail()
+  }
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-    validatePassword();
-  };
+    setPassword(e.target.value)
+    validatePassword()
+  }
 
   const handleConfirmPasswordChange = (
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement>,
   ) => {
-    setConfirmPassword(e.target.value);
-    validateConfirmPassword();
-  };
+    setConfirmPassword(e.target.value)
+    validateConfirmPassword()
+  }
 
   const handleEmailInputFocus = () => {
-    setIsEmailInputFocused(true);
-    validateEmail();
-  };
+    setIsEmailInputFocused(true)
+    validateEmail()
+  }
 
   const handleEmailInputBlur = () => {
-    setIsEmailInputFocused(false);
-    validateEmail();
-  };
+    setIsEmailInputFocused(false)
+    validateEmail()
+  }
 
   const handleFullNamelInputFocus = () => {
-    setIsFullNameInputFocused(true);
-    validateFullName();
-  };
+    setIsFullNameInputFocused(true)
+    validateFullName()
+  }
 
   const handleFullNamelInputBlur = () => {
-    setIsFullNameInputFocused(false);
-    validateFullName();
-  };
+    setIsFullNameInputFocused(false)
+    validateFullName()
+  }
 
   const handlePasswordInputFocus = () => {
-    setIsPasswordInputFocused(true);
-    validatePassword();
-  };
+    setIsPasswordInputFocused(true)
+    validatePassword()
+  }
 
   const handlePasswordInputBlur = () => {
-    setIsPasswordInputFocused(false);
-    validatePassword();
-  };
+    setIsPasswordInputFocused(false)
+    validatePassword()
+  }
 
   const handleConfirmPasswordInputFocus = () => {
-    setIsConfirmPasswordInputFocused(true);
-    validateConfirmPassword();
-  };
+    setIsConfirmPasswordInputFocused(true)
+    validateConfirmPassword()
+  }
 
   const handleConfirmPasswordInputBlur = () => {
-    setIsConfirmPasswordInputFocused(false);
-    validateConfirmPassword();
-  };
+    setIsConfirmPasswordInputFocused(false)
+    validateConfirmPassword()
+  }
 
   const validatePassword = () => {
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasLowerCase = /[a-z]/.test(password);
+    const hasUpperCase = /[A-Z]/.test(password)
+    const hasLowerCase = /[a-z]/.test(password)
     const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(
-      password
-    );
+      password,
+    )
 
-    const isValidLength = password.length >= 8;
+    const isValidLength = password.length >= 8
 
     if (!isValidLength) {
-      setPasswordError("Password must be at least 8 characters");
+      setPasswordError('Password must be at least 8 characters')
     } else if (!hasUpperCase) {
-      setPasswordError("Password must contain at least one uppercase letter");
+      setPasswordError('Password must contain at least one uppercase letter')
     } else if (!hasLowerCase) {
-      setPasswordError("Password must contain at least one lowercase letter");
+      setPasswordError('Password must contain at least one lowercase letter')
     } else if (!hasSpecialChar) {
-      setPasswordError("Password must contain at least one special character");
+      setPasswordError('Password must contain at least one special character')
     } else {
-      setPasswordError("");
+      setPasswordError('')
     }
-  };
+  }
 
   const validateConfirmPassword = () => {
     if (!confirmPassword.trim()) {
-      setConfirmPasswordError("Confirm Password cannot be empty");
-    }
-    else if(confirmPassword !== password) {
-      setConfirmPasswordError("Confirm Password does not match");
+      setConfirmPasswordError('Confirm Password cannot be empty')
+    } else if (confirmPassword !== password) {
+      setConfirmPasswordError('Confirm Password does not match')
     } else {
-      setConfirmPasswordError("");
+      setConfirmPasswordError('')
     }
   }
 
   const togglePasswordVisibility = () => {
-    setShowPassword(prevShowPassword => !prevShowPassword);
-  };
+    setShowPassword((prevShowPassword) => !prevShowPassword)
+  }
 
   const toggleConfirmPasswordVisibility = () => {
-    setShowConfirmPassword(prevShowPassword => !prevShowPassword);
-  };
+    setShowConfirmPassword((prevShowPassword) => !prevShowPassword)
+  }
 
   const handleSignUp = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
     if (!agreeTerms) {
-      alert("Please agree to the terms of service and privacy policy.");
+      alert('Please agree to the terms of service and privacy policy.')
     }
 
-    validateEmail();
-    validateFullName();
-    validatePassword();
-    validateConfirmPassword();
-  };
+    validateEmail()
+    validateFullName()
+    validatePassword()
+    validateConfirmPassword()
+  }
 
   const handleGoogleSignUp = () => {
-    console.log("Signing up with Google");
-  };
+    console.log('Signing up with Google')
+  }
 
   const handleAgreeTermsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAgreeTerms(e.target.checked);
-  };
+    setAgreeTerms(e.target.checked)
+  }
 
   return (
     <div className="centered-container">
@@ -180,7 +180,7 @@ const SignUpForm: React.FC = () => {
                 <img
                   className="google-icon"
                   src="https://hrcdn.net/fcore/assets/google-colored-20b8216731.svg"
-                ></img>{" "}
+                ></img>{' '}
                 <span>Continue with Google</span>
               </button>
             </div>
@@ -232,7 +232,8 @@ const SignUpForm: React.FC = () => {
                 />
                 <div className="toggle-show-password-button">
                   <button type="button" onClick={togglePasswordVisibility}>
-                  <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} /></button>
+                    <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+                  </button>
                 </div>
                 {!isPasswordInputFocused && passwordError && (
                   <div className="validation-error">{passwordError}</div>
@@ -250,8 +251,14 @@ const SignUpForm: React.FC = () => {
                   onChange={handleConfirmPasswordChange}
                 />
                 <div className="toggle-show-password-button">
-                  <button type="button" onClick={toggleConfirmPasswordVisibility}>
-                  <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} /></button>
+                  <button
+                    type="button"
+                    onClick={toggleConfirmPasswordVisibility}
+                  >
+                    <FontAwesomeIcon
+                      icon={showConfirmPassword ? faEyeSlash : faEye}
+                    />
+                  </button>
                 </div>
                 {!isConfirmPasswordInputFocused && confirmPasswordError && (
                   <div className="validation-error">{confirmPasswordError}</div>
@@ -265,7 +272,7 @@ const SignUpForm: React.FC = () => {
                   onChange={handleAgreeTermsChange}
                 />
                 <label htmlFor="agreeTerms" className="terms-label">
-                  I agree to the <a href="#">Terms of Service</a> and{" "}
+                  I agree to the <a href="#">Terms of Service</a> and{' '}
                   <a href="#">Privacy Policy</a>
                 </label>
               </div>
@@ -277,7 +284,7 @@ const SignUpForm: React.FC = () => {
         </div>
         <div className="switch-to-login">
           <p>
-            Already have account?{" "}
+            Already have account?{' '}
             <a href="#" className="swtich-to-login-link">
               Log in
             </a>
@@ -285,7 +292,7 @@ const SignUpForm: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SignUpForm;
+export default SignUpForm
