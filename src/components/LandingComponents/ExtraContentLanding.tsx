@@ -112,7 +112,6 @@ const ExtraContentLanding = () => {
           sx={{
             fontSize: '40px',
             fontFamily: 'Opne Sans, sans-serif',
-            marginBottom: '100px',
             fontWeight: 'bold',
           }}
         >

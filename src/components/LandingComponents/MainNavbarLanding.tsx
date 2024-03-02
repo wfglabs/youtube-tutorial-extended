@@ -16,6 +16,15 @@ const style = {
 }
 
 const MainNavbarLanding = () => {
+
+  const handleSignUpButton = () => {
+    window.location.href = '/signup'
+  }
+
+  const handleLoginButton = () => {
+    window.location.href = '/login'
+  }
+
   return (
     <Box sx={style}>
       <Box>
@@ -92,6 +101,7 @@ const MainNavbarLanding = () => {
           </Typography>
           <Box>
             <Button
+              onClick={handleSignUpButton}
               variant="contained"
               sx={{
                 color: 'white',
@@ -107,6 +117,7 @@ const MainNavbarLanding = () => {
               Sign up
             </Button>
             <Button
+              onClick={handleLoginButton}
               variant="outlined"
               sx={{
                 color: 'black',
