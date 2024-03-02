@@ -18,7 +18,7 @@ const FooterEveryWhere = () => {
           marginTop: '10px',
         }}
       >
-        A Platform For Making Learning Fun 
+        A Platform For Making Learning Fun
       </h1>
       <FooterContainer>
         <Row>

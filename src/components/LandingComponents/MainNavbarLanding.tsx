@@ -16,7 +16,6 @@ const style = {
 }
 
 const MainNavbarLanding = () => {
-
   const handleSignUpButton = () => {
     window.location.href = '/signup'
   }

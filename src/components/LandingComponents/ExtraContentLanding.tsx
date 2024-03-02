@@ -34,65 +34,84 @@ const ExtraContentLanding = () => {
   return (
     <Box>
       <Box>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-around',
+            marginTop: '100px',
+            marginLeft: '20vh',
+            marginRight: '20vh',
+          }}
+        >
+          <Slide
+            direction="right"
+            in={isOnMainScreen}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Card>
+              <img
+                style={{ height: '200px', width: '200px' }}
+                src="watchVideo.png"
+              />
+              <Typography sx={cardTextStyle}>Watch Tutorial</Typography>
+            </Card>
+          </Slide>
+          <Slide direction="up" in={isOnMainScreen} mountOnEnter unmountOnExit>
+            <Card>
+              <img style={{ height: '200px', width: '200px' }} src="quiz.jpg" />
+              <Typography sx={cardTextStyle}>Solve Quiz</Typography>
+            </Card>
+          </Slide>
+          <Slide
+            direction="down"
+            in={isOnMainScreen}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Card>
+              <img
+                style={{ height: '200px', width: '200px' }}
+                src="activity.png"
+              />
+              <Typography sx={cardTextStyle}>Do Some Activity</Typography>
+            </Card>
+          </Slide>
+          <Slide
+            direction="left"
+            in={isOnMainScreen}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Card>
+              <img
+                style={{ height: '200px', width: '200px' }}
+                src="certificate.png"
+              />
+              <Typography sx={cardTextStyle}>Get Certified</Typography>
+            </Card>
+          </Slide>
+        </Box>
+      </Box>
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          marginTop: '100px',
-          marginLeft: '20vh',
-          marginRight: '20vh',
+          backgroundImage: 'url(./backgroundLanding.jpg)',
+          marginTop: '150px',
         }}
       >
-        <Slide direction="right" in={isOnMainScreen} mountOnEnter unmountOnExit>
-          <Card>
+        <Slide direction="left" in={isOnMainScreen1} mountOnEnter unmountOnExit>
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <img
-              style={{ height: '200px', width: '200px' }}
-              src="watchVideo.png"
+              src="soloLeveling.avif"
+              style={{
+                borderRadius: '20%',
+                maxHeight: '500px',
+                maxWidth: '1000px',
+                margin: '20px 0 20px 0',
+              }}
             />
-            <Typography sx={cardTextStyle}>Watch Tutorial</Typography>
-          </Card>
+          </Box>
         </Slide>
-        <Slide direction="up" in={isOnMainScreen} mountOnEnter unmountOnExit>
-          <Card>
-            <img style={{ height: '200px', width: '200px' }} src="quiz.jpg" />
-            <Typography sx={cardTextStyle}>Solve Quiz</Typography>
-          </Card>
-        </Slide>
-        <Slide direction="down" in={isOnMainScreen} mountOnEnter unmountOnExit>
-          <Card>
-            <img
-              style={{ height: '200px', width: '200px' }}
-              src="activity.png"
-            />
-            <Typography sx={cardTextStyle}>Do Some Activity</Typography>
-          </Card>
-        </Slide>
-        <Slide direction="left" in={isOnMainScreen} mountOnEnter unmountOnExit>
-          <Card>
-            <img
-              style={{ height: '200px', width: '200px' }}
-              src="certificate.png"
-            />
-            <Typography sx={cardTextStyle}>Get Certified</Typography>
-          </Card>
-        </Slide>
-      </Box>
-      </Box>
-      <Box sx={{backgroundImage: 'url(./backgroundLanding.jpg)', marginTop : '150px'}}>
-      <Slide direction="left" in={isOnMainScreen1} mountOnEnter unmountOnExit>
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-          <img
-            src="soloLeveling.avif"
-            style={{
-              borderRadius: '20%',
-              maxHeight: '500px',
-              maxWidth: '1000px',
-              margin: '20px 0 20px 0',
-             
-            }}
-          />
-        </Box>
-      </Slide>
       </Box>
       <Box
         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}

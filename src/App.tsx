@@ -8,15 +8,15 @@ import FooterEveryWhere from './components/FooterEveryWhere/FooterEveryWhere'
 function App() {
   return (
     <>
-    <Routes>
-      <Route path="/" Component={LandingPage} />
-      <Route path="/home" Component={LandingPage} />
-      <Route path="/login" Component={SignInForm} />
-      <Route path="/signup" Component={SignUpForm} />
-    </Routes>
-    <Box sx={{marginTop:'200px'}}>
-      <FooterEveryWhere/>
-    </Box>
+      <Routes>
+        <Route path="/" Component={LandingPage} />
+        <Route path="/home" Component={LandingPage} />
+        <Route path="/login" Component={SignInForm} />
+        <Route path="/signup" Component={SignUpForm} />
+      </Routes>
+      <Box sx={{ marginTop: '200px' }}>
+        <FooterEveryWhere />
+      </Box>
     </>
   )
 }
