@@ -1,11 +1,11 @@
 import React from 'react'
 import logo from './logo.svg'
 import { Box } from '@mui/material'
-import SecondaryNavbar from '../components/SecondaryNavbarLanding'
-import TertiaryNavbar from '../components/TertiaryNavbarLanding'
-import MainNavbarLanding from '../components/MainNavbarLanding'
-import ExplanationLanding from '../components/ExaplanationLanding'
-import ExtraContentLanding from '../components/ExtraContentLanding'
+import SecondaryNavbar from '../components/LandingComponents/SecondaryNavbarLanding'
+import TertiaryNavbar from '../components/LandingComponents/TertiaryNavbarLanding'
+import MainNavbarLanding from '../components/LandingComponents/MainNavbarLanding'
+import ExplanationLanding from '../components/LandingComponents/ExaplanationLanding'
+import ExtraContentLanding from '../components/LandingComponents/ExtraContentLanding'
 
 function App() {
   return (
