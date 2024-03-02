@@ -1,0 +1,126 @@
+:root {
+    --yte-primary-button: 0, 149, 246;
+    --web-always-white: 255, 255, 255;
+    --yte-link: 0, 55, 107;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif; --font-family-input: SourceCodePro, monaco, Courier, monospace;
+  }
+
+  .yte-header-content {
+    font-size: 1.8em;
+    font-weight: 800;
+    font-family: "Roboto", sans-serif;
+    color: #333;
+  }
+
+  .centered-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+  }
+  
+  .signin-form {
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .signin-form h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+  
+  .input-container {
+    margin: 20px auto;
+    position: relative;
+  }
+  
+  .google-icon {
+    height: 19px;
+  }
+
+  .input-container label {
+    padding: 8px;
+    display: block;
+    font-weight: 500;
+    text-align: left;
+    font-size: 17px;
+  }
+  
+  .input-container input {
+    padding: 14px;
+    width: 90%;
+    border-radius: 8px;
+    font-size: 17px;
+    border: 1px solid #d0cdcd;
+    transition: #999898 0.3s ease;
+  }
+
+  .input-container input:focus {
+    outline: none;
+    border-color: #474646;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-submit-button {
+    padding: 8px;
+    width: 64%;
+    margin-top: 24px;
+    border-radius: 13px;
+    font-size: 17px;
+    color: rgb(var(--web-always-white));
+    background-color: rgb(var(--yte-primary-button));
+    border: 1px solid #ccc;
+  }
+
+  .google-signin-button {
+    margin: 20px auto;
+    padding: 10px;
+    width: 98%;
+    border-radius: 13px;
+    font-size: 17px;
+    color: rgb(var(--web-always-white));
+    background-color: rgb(var(--yte-primary-button));
+    border: 1px solid #ccc;
+  }
+
+  .switch-to-signup {
+    margin-top: 5%;
+    padding: 2%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(var(--yte-link));
+  }
+
+  .swtich-to-signup-link {
+    color: rgb(var(--yte-primary-button));
+  }
+
+  .signin-form-content {
+    padding: 10px;
+  }
+
+  .toggle-show-password-login-button {
+    position: absolute;
+    margin-top: -12%;
+    margin-left: 88%;
+  }
+
+  .toggle-show-password-login-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+  }

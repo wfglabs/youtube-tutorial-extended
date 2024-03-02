@@ -1,25 +1,23 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import SignUpForm from './components/SignUp/SignUpForm'
+import SignInForm from './components/SignIn/SignInForm'
+import LandingPage from './pages/LandingPage'
+import { Box } from '@mui/system'
+import FooterEveryWhere from './components/FooterEveryWhere/FooterEveryWhere'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" Component={LandingPage} />
+        <Route path="/home" Component={LandingPage} />
+        <Route path="/login" Component={SignInForm} />
+        <Route path="/signup" Component={SignUpForm} />
+      </Routes>
+      <Box sx={{ marginTop: '200px' }}>
+        <FooterEveryWhere />
+      </Box>
+    </>
   )
 }
 
