@@ -10,12 +10,14 @@ import AssignmentIcon from '@mui/icons-material/Assignment'
 import PsychologyIcon from '@mui/icons-material/Psychology'
 import SchoolIcon from '@mui/icons-material/School'
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium'
+import Constant from '../../Constant.js'
 
 const style = {
-  backgroundImage: 'url(./backgroundLanding.jpg)',
+  backgroundImage: Constant.backgroundImage.gradientCyan1,
 }
 
 const MainNavbarLanding = () => {
+
   const handleSignUpButton = () => {
     window.location.href = '/signup'
   }
@@ -80,7 +82,7 @@ const MainNavbarLanding = () => {
             sx={{
               fontSize: '50px',
               fontWeight: 'bold',
-              fontFamily: 'Opne Sans, sans-serif',
+              fontFamily: Constant.fontFamily.headerFont,
             }}
           >
             Without Practice Tutorials Are Useless
@@ -135,7 +137,7 @@ const MainNavbarLanding = () => {
           </Box>
           <Typography
             sx={{
-              color: '#39424E',
+              color: Constant.fontColor.blackShadeLight2,
               fontSize: '18px',
               marginTop: '40px',
               fontWeight: '300',
