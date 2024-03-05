@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, Helvetica, sans-serif; --font-family-input: SourceCodePro, monaco, Courier, monospace;
+}
+
 .App {
   text-align: center;
 }

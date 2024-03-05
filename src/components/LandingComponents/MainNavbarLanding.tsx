@@ -17,7 +17,6 @@ const style = {
 }
 
 const MainNavbarLanding = () => {
-
   const handleSignUpButton = () => {
     window.location.href = '/signup'
   }
@@ -29,7 +28,7 @@ const MainNavbarLanding = () => {
   return (
     <Box sx={style}>
       <Box>
-        <Box
+        {/* <Box
           sx={{
             display: 'flex',
             justifyContent: 'space-between',
@@ -69,12 +68,12 @@ const MainNavbarLanding = () => {
           >
             I am a creator
           </Button>
-        </Box>
+        </Box> */}
         <Box
           sx={{
             display: 'flex',
             alignItems: 'center',
-            marginTop: '150px',
+            padding: '90px',
             flexDirection: 'column',
           }}
         >
