@@ -3,6 +3,8 @@ import './SignUpForm.style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import YouTubeIcon from '@mui/icons-material/YouTube'
+import { Box, Typography } from '@mui/material'
 
 const SignUpForm: React.FC = () => {
   const [fullName, setFullName] = useState('')
@@ -173,7 +175,20 @@ const SignUpForm: React.FC = () => {
       <div>
         <div className="signup-form">
           <div className="signup-form-content">
-            <div className="yte-header-content">Tutorial extended</div>
+            <Box sx={{ display: 'flex', justifyContent: 'space-around' }}>
+              <Typography
+                sx={{
+                  color: 'black',
+                  fontSize: '30px',
+                  fontWeight: '1000',
+                  fontFamily: 'cursive',
+                  textAlign: 'left',
+                }}
+              >
+                Tutorial Extended
+              </Typography>
+              <YouTubeIcon style={{ color: 'blue', fontSize: 45 }} />
+            </Box>
             <p className="create-your-account-text">Create your account</p>
             <div>
               <button

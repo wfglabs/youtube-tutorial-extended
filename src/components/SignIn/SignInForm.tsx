@@ -3,6 +3,8 @@ import './SignInForm.style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { Box, Typography } from '@mui/material'
+import YouTubeIcon from '@mui/icons-material/YouTube'
 
 const SignInForm: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -38,7 +40,22 @@ const SignInForm: React.FC = () => {
       <div>
         <div className="signin-form">
           <div className="signin-form-content">
-            <div className="yte-header-content">Tutorial extended</div>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+              <Typography
+                sx={{
+                  color: 'black',
+                  fontSize: '30px',
+                  fontWeight: '1000',
+                  fontFamily: 'cursive',
+                  textAlign: 'left',
+                }}
+              >
+                Tutorial Extended
+              </Typography>
+              <YouTubeIcon
+                style={{ color: 'blue', fontSize: 45, marginLeft: '10px' }}
+              />
+            </Box>
             <div>
               <button
                 className="google-signin-button"

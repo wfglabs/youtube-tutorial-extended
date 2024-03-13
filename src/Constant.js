@@ -11,11 +11,10 @@ const Constant =
         "headerFont" : "Opne Sans, sans-serif"
     },
     "fontColor" : {
-        "blackShadeLight1" : "#36454F", 
+        "blackShadeLight1" : "#36454F",
         "blackShadeLight2" : "#39424E",
         "cyanShadeLight1" : "#00BFFF",
         "cyanShade" : "cyan"
     }
-
 }
 export default Constant;
