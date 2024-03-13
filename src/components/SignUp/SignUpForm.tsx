@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import './SignUpForm.style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faEye,
-  faEyeSlash,
-} from '@fortawesome/free-solid-svg-icons'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import { Box, Typography } from '@mui/material'
