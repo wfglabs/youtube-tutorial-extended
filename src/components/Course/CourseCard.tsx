@@ -27,7 +27,7 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
           textAlign: 'center',
         }}
       >
-        <CardHeader title={course.title} />
+        <CardHeader title={course.title}  />
         <CardMedia
           component="img"
           height="200"
