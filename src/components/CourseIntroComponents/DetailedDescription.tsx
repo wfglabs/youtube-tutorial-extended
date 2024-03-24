@@ -1,6 +1,5 @@
-import React from 'react';
-import { Box, Typography, Button, Card } from '@mui/material';
-
+import React from 'react'
+import { Box, Typography, Button, Card } from '@mui/material'
 
 const DetailedDescription = () => {
   return (
@@ -10,6 +9,6 @@ const DetailedDescription = () => {
         This is a detailed description of the course.
       </Typography>
     </div>
-  );
-};
-export default DetailedDescription;
+  )
+}
+export default DetailedDescription
